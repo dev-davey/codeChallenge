@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.header h3 {
+  margin: 0;
+}
+
+.organization-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3em;
+}
+.organization-list img {
+  height: 10rem;
+}
+
+.organization-list p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-breakup {
+  height: 2px;
+  width: 50%;
+  background-color: rgb(28, 73, 73);
+  margin: 2em;
+}
+
+.more-info {
+  background: rgb(28, 73, 73);
   color: white;
+  width: 200px;
+  height: 40px;
+  letter-spacing: 1.4px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0.5em;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.more-info :hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-buttons button {
+  margin: 10px;
+}
+
+.organization-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+  margin-top: 1rem;
+}
+
+.organization-info img {
+  height: 15rem;
+}
+
+.facts {
+  padding: 3em;
 }

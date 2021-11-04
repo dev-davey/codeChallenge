@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FetchGithubOrgs from "./components/FetchGithubOrgs";
+import MoreInfo from "./components/MoreInfo";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  HashRouter,
+} from "react-router-dom";
+import "./App.css";
 
-function App() {
+//used hashrouter for routing for a quick solution so that the compenent re-renders on the screen if app is refreshed.
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Switch>
+        <Route exact path="/" Component={App}>
+          <FetchGithubOrgs />
+        </Route>
+        <Route path="/orgs/:name" component={MoreInfo} />
+      </Switch>
+    </HashRouter>
   );
 }
-
-export default App;
